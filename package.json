@@ -1,0 +1,16 @@
+{
+  "title": "Password.diet",
+  "name": "passworddiet",
+  "version": "0.0.1",
+  "description": "A diceware password generator",
+  "main": "index.js",
+  "author": "Csaba Okrona",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "diceware-password-generator": "^1.1.1"
+  }
+}
