@@ -9,6 +9,9 @@
     "firefox": ">=38.0a1",
     "fennec": ">=38.0a1"
   },
+  "scripts": {
+    "build-panel": "webpack src/panel.js data/panel.gen.js"
+  },
   "license": "MIT",
   "dependencies": {
     "diceware-password-generator": "^1.1.1"

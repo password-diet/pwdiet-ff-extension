@@ -1,0 +1,14 @@
+body {
+    min-width: 200px;
+    height: auto;
+    width: auto;
+    padding: 10px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+#copy-success {
+	color: #006E2E;
+}

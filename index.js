@@ -1,6 +1,7 @@
 var { ToggleButton } = require('sdk/ui/button/toggle');
 var panels = require("sdk/panel");
 var self = require("sdk/self");
+var data = require("sdk/self").data;
 const {Cc, Ci} = require("chrome");
 const gClipboardHelper =Cc["@mozilla.org/widget/clipboardhelper;1"].getService(Ci.nsIClipboardHelper);
 
@@ -18,8 +19,14 @@ var button = ToggleButton({
 
 var panel = panels.Panel({
   contentURL: self.data.url("panel.html"),
-  contentScriptFile: "./alma.js",
+  contentScriptFile: [
+    data.url("vendor/js/jquery-1.11.3.min.js"),
+    data.url("vendor/js/materialize.min.js"),
+    data.url("panel.gen.js")
+  ],
   onHide: handleHide,
+  width: 350,
+  height: 150,
 });
 
 panel.on("show", function() {
